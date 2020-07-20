@@ -6,7 +6,7 @@ txt=input("Paste the block of text you would like to summarize: ")
 
 wordlist=txt.split(" ")
 
-wc=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","'","&"]
+wc=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","'","&","1","2","3","4","5","6","7","8","9","0"]
 
 for i in range(0,len(wordlist)-1):
     wordlist[i]=wordlist[i].lower()
@@ -40,8 +40,8 @@ for l in range(len(bysent)):
 
     for i in range(len(temp2)):
         for j in range(0,len(temp2[i])-1):
-            if temp2[i][j-1] in punc:
-                temp2[i]=temp2[i].replace(temp2[i][j-1],"")
+            if temp2[i][j] in punc:
+                temp2[i]=temp2[i].replace(temp2[i][j]," ")
      
     d=Counter(temp2).most_common();
     temp3=0
